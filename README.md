@@ -1,4 +1,4 @@
-![getallproduct](https://github.com/user-attachments/assets/6c371d11-6566-44b5-beb2-6f7997456850)### DOCKER REDIS KURULUMU
+### DOCKER REDIS KURULUMU
 
     docker run --name lokalredis -d -p 6379:6379 redis:7.2.3-alpine3.18
 ###   DOCKER DESKTOP ÜZERİNDE UYGULAMALARIMIZI YÜKLEME KOMUTLARI
@@ -9,6 +9,8 @@
     2- docker run --name postgresdb -e POSTGRES_PASSWORD=root -p 5433:5432 -d postgres
     3- docker run -d --name some-rabbit -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER="BilgeAdmin" -e RABBITMQ_DEFAULT_PASS="Aa123456" rabbitmq:3-management
 
+
+![getallproduct](https://github.com/user-attachments/assets/6c371d11-6566-44b5-beb2-6f7997456850)
 ![getProductByCategory](https://github.com/user-attachments/assets/3c71cbb7-a32a-4ad8-8f36-4cfb5814e3c2)![updateproduct](https://github.com/user-attachments/assets/ca800b8c-d406-44b6-9100-7fa7c2c771d5)
 ![addProduct](https://github.com/user-attachments/assets/2f22c2e2-bf7f-4147-9950-cca37b422f9a)
 ![addSeller](https://github.com/user-attachments/assets/926a42c5-89bb-4ee0-8d7d-95d102385355)
