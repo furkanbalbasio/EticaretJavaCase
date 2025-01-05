@@ -49,6 +49,13 @@ GET PRODUCT BY ID METODU
 
 Kullanıcıdan getirmek istediği ürünün id'sini alarak ürün getirilir.
 
+DELETE PRODUCT METODU
+
+Seçilen ürünün id'si ile silme işlemi yapan metottur. Satıcı sadece kendi ürünlerini silebilir. 
+
+
+![deleteProduct](https://github.com/user-attachments/assets/c737fb3b-eabb-4897-8272-681d38e7e679)
+
 
 ![getProductById](https://github.com/user-attachments/assets/41308b37-f135-4ab1-a636-31e6e5a4d2a7)
 
