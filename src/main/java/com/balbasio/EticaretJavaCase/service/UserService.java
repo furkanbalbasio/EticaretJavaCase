@@ -25,7 +25,7 @@ public class UserService {
         if(user.isEmpty()) throw new EticaretJavaCaseException(ErrorType.KULLANICI_ADI_VEYA_SIFRE_HATALI);
         Optional<String> jwtToken = jwtService.createToken(user.get().getId());
         if(jwtToken.isEmpty())
-            throw new EticaretJavaCaseException(ErrorType.TOKEN_ERROR);
+            throw new EticaretJavaCaseException(ErrorType.TOKEN_HATASI);
         return jwtToken.get();
     }
 
@@ -74,7 +74,7 @@ public class UserService {
     public Optional<User> tokenConvertUser(String token){
         Optional<Long> userId = jwtService.getIdByToken(token);
         if (userId.isEmpty()){
-            throw new EticaretJavaCaseException(ErrorType.TOKEN_ERROR);
+            throw new EticaretJavaCaseException(ErrorType.TOKEN_HATASI);
         }
         Optional<User> user = userRepository.findOptionalById(userId.get());
         return user;
@@ -98,25 +98,4 @@ public class UserService {
         sellerUser.get().setUserRole(ERole.SELLER);
         userRepository.save(sellerUser.get());
     }
-
-//    public GetAddressUserResponseDto getAddress(String token) {
-//        Optional<User> user = tokenConvertUser(token);
-//        if (!user.isPresent()) {
-//            throw new EticaretJavaCaseException(ErrorType.TOKEN_ERROR);
-//        }
-//        Long addressId = user.get().getAddressId();
-//        Optional<Address> addressOptional = addressRepository.findById(addressId);
-//        if (addressOptional.isEmpty()) {
-//            throw new EticaretJavaCaseException(ErrorType.KAYITLI_ADRES_BULUNAMADI);
-//        }
-//
-//        Address address = addressOptional.get();
-//
-//        GetAddressUserResponseDto getAddressUserResponseDto = GetAddressUserResponseDto.builder()
-//                .address(address.getAddress())
-//                .addressType(address.getAddressType())
-//                .build();
-//
-//        return getAddressUserResponseDto;
-//    }
 }

@@ -20,8 +20,8 @@ public class RedisConfig {
     public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory connectionFactory) {
         RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(connectionFactory);
-        template.setKeySerializer(new StringRedisSerializer());  // Anahtarların serileştirilmesi
-        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());  // Değerlerin serileştirilmesi
+        template.setKeySerializer(new StringRedisSerializer());
+        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
         return template;
     }
 }

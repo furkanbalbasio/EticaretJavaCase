@@ -47,7 +47,7 @@ public class ProductService {
     public Optional<User> tokenConvertUser(String token){
         Optional<Long> userId = jwtService.getIdByToken(token);
         if (userId.isEmpty()){
-            throw new EticaretJavaCaseException(ErrorType.TOKEN_ERROR);
+            throw new EticaretJavaCaseException(ErrorType.TOKEN_HATASI);
         }
         Optional<User> user = userRepository.findOptionalById(userId.get());
         return user;
