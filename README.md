@@ -6,15 +6,7 @@ DOCKER DESKTOP ÜZERİNDE UYGULAMALARIMIZI YÜKLEME KOMUTLARI
 
     Sırası ile lokalde kurulması gerekenler
     
-    1- docker run --name mongodb -e "MONGO_INITDB_ROOT_USERNAME=admin" -e "MONGO_INITDB_ROOT_PASSWORD=root" -p 27017:27017 mongo:7.0-rc-jammy
-    
-    1.1 kurulumun ardından mongo compas ile bağlanıp, mongosh içinde yeni bir yetkili kullanıcı oluştur
-    
-    1.1.1 db.createUser({user: "defaultUser",pwd: "bilge!*123",roles: ["readWrite", "dbAdmin"]})
-    
     2- docker run --name postgresdb -e POSTGRES_PASSWORD=root -p 5433:5432 -d postgres
-    
-    3- docker run -d --name some-rabbit -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER="BilgeAdmin" -e RABBITMQ_DEFAULT_PASS="Aa123456" rabbitmq:3-management
 
 
 GET ALL PRODUCT METODU
